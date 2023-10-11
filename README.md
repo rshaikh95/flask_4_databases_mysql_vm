@@ -33,5 +33,5 @@ Week 4 Homework Assignment: MySQL on VMs with Azure and GCP
 
 14. Created Flask app and insert code for faker data inside flask app code  ![Screenshot 2023-10-10 234732](https://github.com/rshaikh95/flask_4_databases_mysql_vm/assets/141374132/0aa358d1-8631-466a-8938-9e8b3f4050fa)
 
-15. Didnt have that error when using different locale ![Screenshot 2023-10-10 231435](https://github.com/rshaikh95/flask_4_databases_mysql_vm/assets/141374132/6bf7276d-5999-40c9-a744-92fd2283d009)
+15. Didnt have that error when using different locale such as locale in India but unfortunetly results were in all from Indian language and addressess so did not want to use. Main issue was the character length for phone numbers in US address were way too long with extensions and I could not figure out how to circumvent that unless using different locale for faker which was India which allowed me to insert the data but I didn't want to use due to not being in english ![Screenshot 2023-10-10 231435](https://github.com/rshaikh95/flask_4_databases_mysql_vm/assets/141374132/6bf7276d-5999-40c9-a744-92fd2283d009)
 
