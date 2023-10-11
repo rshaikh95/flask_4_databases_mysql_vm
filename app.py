@@ -4,12 +4,14 @@ import os
 from dotenv import load_dotenv
 from sqlalchemy import create_engine
 from faker import Faker
+from sqlalchemy import text
+
 
 # Load environment variables
 load_dotenv()
 
 # Database connection settings from environment variables
-DB_HOST = os.getenv("MySQL")
+DB_HOST = os.getenv("DB_HOST")
 DB_DATABASE = os.getenv("DB_DATABASE")
 DB_USERNAME = os.getenv("DB_USERNAME")
 DB_PASSWORD = os.getenv("DB_PASSWORD")

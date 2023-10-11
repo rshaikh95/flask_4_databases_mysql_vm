@@ -160,5 +160,5 @@ cython_debug/
 #.idea/
 
 # dotenv environment variables file
-.env
+db.env
 .env.test

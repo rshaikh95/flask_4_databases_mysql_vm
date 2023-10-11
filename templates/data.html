@@ -1,27 +1,55 @@
-{% extends "base.html" %} 
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Hospital Priceline</title>
+</head>
+<body>
+    <h1>Hospital Priceline</h1>
 
-{% block content %}
+    <!-- add in a simple find search to the table -->
+    <form action="/find-code" method="post">
+        <label for="search">Search by CPT code:</label>
+        <input type="text" name="search" id="search" />
+        <input type="submit" value="Search CPT" />
+    </form>
 
-    <section>
-        <h2 class="text-xl mb-2"> Dataset preview using a TABLE in HTML</h2>
-        <table class="table-auto">
-            <thead>
-                <tr>
-                    <th class="px-4 py-2">HospCode</th>
-                    <th class="px-4 py-2">Code</th>
-                    <th class="px-4 py-2">Description</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for data in data.values %}
-                <tr>
-                    <td class="border px-4 py-2">{{ data[0] }}</td>
-                    <td class="border px-4 py-2">{{ data[1] }}</td>
-                    <td class="border px-4 py-2">{{ data[2] }}</td>
-                </tr>
-                {% endfor %}
-            </tbody>
-        </table>
-    </section>
+    <br />
 
-{% endblock %}
+    <form action="/find-code-description" method="post">
+        <label for="search">Search by CPT description:</label>
+        <input type="text" name="search" id="search" />
+        <input type="submit" value="Search Description" />
+    </form>
+
+    <!-- create home button that directors to / -->
+    <br />
+    <form action="/" method="get">
+        <input type="submit" value="Reset Search" />
+    </form>
+
+    <br />
+
+    <h2>Random Sample of 100 Rows</h2>
+
+    <table>
+        <tr>
+            <th>CPT Code</th>
+            <th>CPT Description</th>
+            <th>Setting</th>
+            <th>Type</th>
+            <th>Price</th>
+        </tr>
+        {% for row in data.values %}
+        <tr>
+            <td>{{ row[0] }}</td>
+            <td>{{ row[1] }}</td>
+            <td>{{ row[2] }}</td>
+            <td>{{ row[3] }}</td>
+            <td>{{ row[4] }}</td>
+        <tr>
+            
+        </tr>
+        {% endfor %}
+</body>
+</html>
